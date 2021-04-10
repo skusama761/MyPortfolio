@@ -7,8 +7,7 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
-  String desc =
-      "Experienced App Developer (Native/Hybrid) with over 2 years of experience in App Development working on my own projects and freelancing and 5 months plus in Flutter.";
+  String desc = 'In the middle of difficulties lies ease.';
 
   _launchURL(String url) async {
     if (await canLaunch(url)) {
@@ -17,7 +16,7 @@ class _LandingPageState extends State<LandingPage> {
       throw 'Could not launch $url';
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +32,7 @@ class _LandingPageState extends State<LandingPage> {
             ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(80)),
                 child: Image.asset(
-                  "assets/profilepic.jpeg",
+                  "assets/profilepic.jpg",
                   width: 150,
                   height: 150,
                 )),
@@ -41,7 +40,7 @@ class _LandingPageState extends State<LandingPage> {
               height: 12,
             ),
             Text(
-              "Sanskar Tiwari",
+              "Shaikh Usama Ilyas",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -58,66 +57,77 @@ class _LandingPageState extends State<LandingPage> {
                 style: TextStyle(
                     fontSize: 16,
                     color: Colors.white,
-                fontWeight: FontWeight.w300),
+                    fontWeight: FontWeight.w300),
               ),
             ),
             SizedBox(
               height: 20,
             ),
-            Text("Connect with me", style: TextStyle(
-              color: Colors.white,
-              fontSize: 14
-            ),),
-            SizedBox(height: 20,),
+            Text(
+              "Connect with me",
+              style: TextStyle(color: Colors.white, fontSize: 14),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 GestureDetector(
-                  onTap: (){
-                    _launchURL("https://www.facebook.com/lamsanskar");
-                  },
-                    child: Image.asset("assets/facebook.png", width: 23,height: 23,)
-                ),
+                    onTap: () {
+                      _launchURL("https://github.com/skusama761");
+                    },
+                    child: Image.asset(
+                      "assets/github.png",
+                      width: 23,
+                      height: 23,
+                    )),
                 SizedBox(
                   width: 16,
                 ),
                 GestureDetector(
-                  onTap: (){
-                    _launchURL("https://www.instagram.com/indianappguy/");
-                  },
-                    child: Image.asset("assets/instagram.png", width: 23,height: 23,)
-                ),
+                    onTap: () {
+                      _launchURL("https://www.instagram.com/skusama761/");
+                    },
+                    child: Image.asset(
+                      "assets/instagram.png",
+                      width: 23,
+                      height: 23,
+                    )),
                 SizedBox(
                   width: 16,
                 ),
                 GestureDetector(
-                  onTap: (){
-                    _launchURL("https://twitter.com/Theindianappguy");
-                  },
-                    child: Image.asset("assets/twitter.png", width: 23,height: 23,)
-                ),
+                    onTap: () {
+                      _launchURL("https://twitter.com/Shaikh_Usama_");
+                    },
+                    child: Image.asset(
+                      "assets/twitter.png",
+                      width: 23,
+                      height: 23,
+                    )),
               ],
             ),
             SizedBox(
               height: 30,
             ),
             GestureDetector(
-              onTap: (){
-                _launchURL("https://www.linkedin.com/in/lamsanskar/");
+              onTap: () {
+                _launchURL(
+                    "https://www.linkedin.com/in/shaikh-usama-159004182/");
               },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
-                  gradient: LinearGradient(
-                    colors: [const Color(0xffA2834D),
-                      const Color(0xffBC9A5F)]
-                  )
+                    borderRadius: BorderRadius.all(Radius.circular(30)),
+                    gradient: LinearGradient(colors: [
+                      const Color(0xffA2834D),
+                      const Color(0xffBC9A5F)
+                    ])),
+                child: Text(
+                  "Download My Resume",
+                  style: TextStyle(color: Colors.white),
                 ),
-                child: Text("Download My Resume",
-                style: TextStyle(
-                  color: Colors.white
-                ),),
               ),
             ),
           ],
